@@ -1,0 +1,35 @@
+<div class="col-form-label" style="text-shadow: chartreuse 2px 2px 6px; font-weight: bolder; margin-left: 50%">
+  Update Awsome Entry
+</div>
+<form [formGroup]="awsomeForm" (ngSubmit)="onSubmit()" class="col-8 offset-3" style="margin-top: 50px">
+  <div class="form-group row">
+    <label class="col-2 col-form-label">ID:</label>
+    <div class="col-10">
+      <input class="form-control" readonly type="text" formControlName="id">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Tag:</label>
+    <div class="col-10">
+      <input class="form-control" type="text" formControlName="tag">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">URL:</label>
+    <div class="col-10">
+      <input class="form-control" type="text" formControlName="url">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Descriptions:</label>
+    <div class="col-10">
+      <textarea class="form-control" type="text" formControlName="descriptions"></textarea>
+    </div>
+  </div>
+  <div class=" row">
+    <button class="btn btn-info" type="submit" style="margin-left: 20%">Submit</button>
+    <button class="btn btn-info" style="margin-left: 100px" type="button" routerLink="/awsome">Back</button>
+    <button class="btn btn-danger" style="margin-left: 100px" type="button" (click)="deleteAwsome()">Delete</button>
+  </div>
+</form>
+
